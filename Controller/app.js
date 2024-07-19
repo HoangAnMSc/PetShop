@@ -4,10 +4,10 @@ $(document).ready(function () {
         slidesToScroll: 1,
         infinite: true, //lam moi slide
         arrows: false, //bat tat < ,>
-        draggable: false, // bat tat keo , roll
+        draggable: true, // bat tat keo , roll
         prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="chevron-back-circle-outline"></ion-icon></button>`,
         nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="chevron-forward-circle-outline"></ion-icon></button>`,
-        dots: true,
+        dots: true, //số trang đang load
         responsive: [
             {
                 breakpoint: 1025,
@@ -24,7 +24,7 @@ $(document).ready(function () {
                 },
             },
         ],
-        // autoplay: true,
-        // autoplaySpeed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2000,
     });
 });

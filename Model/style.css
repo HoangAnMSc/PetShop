@@ -6,95 +6,105 @@
     font-family:'Poppins', sans-serif;
     cursor: pointer;
 }
-/*logo*/
-.logo img {
-    width: 100px;
-}
 
 #wrapper {
-    /* Kích thước màn hình là 1280 x 720 */
     width: 100%;
     height: 100vh;
 }
-#header {
+/* Menu start ------------------------------------*/
+.logo img {
+    width: 150px;
+}
+#header{
     width: 100%;
-    padding:0px 30px;
-    margin-top:33px;
+    padding:0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    flex-direction: row;   
+}
+.contact {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    color:rgba(6, 67, 86, 1);
+    font-size: 20px;
+}
+.contact a{
+    text-decoration: none;
+    color:rgba(6, 67, 86, 1);
+}
+
+#header .contact a :hover{
+    color: #e67e22;
+}
+#menu{
+    width: 100%;
+    padding:10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;    
+    background-color: rgba(6, 67, 86, 1);
 }
 
-#menu {
+#menu .nav-bar {
     list-style:none;
     display: flex;
 }
 
-#menu .item {
+#menu .nav-bar a {
+    color:#ecf0f1;
+    font-size: 26px;
+    text-decoration: none;
     margin:0px 25px;
 }
+#menu .nav-bar :hover{
+    color: rgba(103, 155, 155, 1);
+  }
 
-#menu .item a {
-    color:#626A67;
-    text-decoration: none;
-}
-
-
-#actions {
-    display: flex;
-}
-
-#actions .item {
-    margin-left:22px;
-}
-
-
-
-
-
+/* --------------------------------------------Menu end */
+/* Slide show start ----------------------------------- */
 .image-slider {
-    display: inline-block;
     width: 100%;
-    height: 463px;
-    margin-top:40px;
 }
 .image {
-    width: 100%;
-    height: 463px;
+    /* width: 100%; */
     margin: auto;
     display: flex;
     flex-direction: row;
+    position: relative;
+    z-index: 12;
 }
 .image img {
-    position: relative;
     width: 100%;
-    height: 463px;
-    z-index: 12;
+    height: 551px;
 }
 
 .box-left ,.box-right {
     position: absolute;
     padding:0px 100px;
     width: 50%;
-    display: flex;
-    z-index: 30;
+    z-index: 20;
 }
 .box-left {
     flex-direction: column;
 }
 .box-left h2 {
-    font-size:48px;
+    font-size:52px;
+    font-family: "Lucida Console", "Courier New", monospace;
     margin-top:75px;
     color:#fff;
 }
 .box-left p {
-    color:#D0D0D0;
+    color:#ecf0f1;
+    font-size: 20px;
+    
 }
-.box-left button {
+.box-left button{
     width: 191px;
     height: 40px;
-    margin-top:41px;
-    background:#1d1a1a;
+    font-size: 22px;
+    margin-top:60px;
+    background:rgba(103, 155, 155, 1);
     border:none;
     outline:none;
     color:#fff;
@@ -102,12 +112,15 @@
     border-radius: 20px;
     transition:0.4s;
 }
-
+.box-left a{
+    color: #fff;
+    text-decoration: none;
+}
 .box-left button:hover {
     background:orange;
 }
 .box-right {
-    right: 10px;
+    right: 0;
     justify-content: center;
     align-items: center;
 }
@@ -129,15 +142,6 @@
     }
     
 }
-
-.to-bottom {
-    position:absolute;
-    bottom:-40px;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-
 
 #wp-products {
     padding-top:116px;
@@ -400,4 +404,11 @@
     margin: auto;
     color:#626A67;
     text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+    #nav-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+    
 }
